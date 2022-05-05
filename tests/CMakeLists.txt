@@ -1,18 +1,30 @@
-include(FetchContent)
-FetchContent_Declare(
-  googletest
-  # Specify the commit you depend on and update it regularly.
-  URL https://github.com/google/googletest/archive/609281088cfefc76f9d0ce82e1ff6c30cc3591e5.zip
+if(NOT BUILD_TESTS)
+    return()
+endif()
+
+# Settings
+include(FetchGTest.cmake)
+set(targetName "!!Template!!.gtest")
+
+# Get files to build
+set(sources )
+set(headers )
+
+include_directories("../src/")
+
+# Create executable
+add_executable(${targetName}
+    ${sources}
+    ${headers}
 )
 
-# For Windows: Prevent overriding the parent project's compiler/linker settings
-set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-FetchContent_MakeAvailable(googletest)
+# Link to required libraries
+target_link_libraries(${targetName} PUBLIC !!Template!! gtest_main)
+set_target_properties(${targetName} PROPERTIES FOLDER "${ideFolderSource}")
 
-# Now simply link against gtest or gtest_main as needed. Eg
-file(GLOB_RECURSE sources ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
-add_executable(tests ${sources})
+# Setup project settings
+set_project_warnings(${targetName})  # Which warnings to enable
+set_compile_options(${targetName})   # Which extra compiler flags to enable
 
-target_link_libraries(tests PUBLIC gtest_main)
-
-add_test(NAME tests COMMAND tests)
+# Add tests
+add_test(NAME ${targetName} COMMAND tests)
