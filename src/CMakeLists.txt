@@ -1,7 +1,6 @@
 find_package(Threads)
 
 # Settings
-include(CustomCommands.cmake)
 set(targetName "!!Template!!")
 
 # Get files to build
@@ -26,7 +25,7 @@ set_compile_options(${targetName})   # Which extra compiler flags to enable
 set_output_directory(${targetName})  # Set the output directory of the library
 
 # Copy header files to output after build
-copy_headers_to_output(${targetName} "${headers}")
+copy_headers_to_output(${targetName} "${headers}" "")
 
 # Specify version
 target_compile_definitions(${targetName} PUBLIC VERSION_MAJOR=0)
