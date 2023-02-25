@@ -1,11 +1,11 @@
-find_package(Threads)
+# find_package(Threads)
 
 # Settings
-set(targetName "!!Template!!")
+set(targetName Template)
 
 # Get files to build
 set(headers )
-set(sources)
+set(sources ${CMAKE_CURRENT_LIST_DIR}/main.cpp)
 
 # Create library
 add_library(${targetName} STATIC
@@ -15,9 +15,9 @@ add_library(${targetName} STATIC
 )
 
 
-# Link to thread module for maths functions.
-target_link_libraries(${targetName} PRIVATE ${CMAKE_THREAD_LIBS_INIT})
-set_target_properties(${targetName} PROPERTIES FOLDER "${ideFolderSource}")
+# Link to thread module
+# target_link_libraries(${targetName} PRIVATE ${CMAKE_THREAD_LIBS_INIT})
+# set_target_properties(${targetName} PROPERTIES FOLDER "${ideFolderSource}")
 
 # Setup project settings
 set_project_warnings(${targetName})  # Which warnings to enable
@@ -33,5 +33,5 @@ target_compile_definitions(${targetName} PUBLIC VERSION_MINOR=0)
 target_compile_definitions(${targetName} PUBLIC VERSION_PATCH=1)
 
 # System installation
-install(TARGETS ${targetName} DESTINATION lib)
-install(FILES ${headers} DESTINATION include/!!Target!!)
+# install(TARGETS ${targetName} DESTINATION lib)
+# install(FILES ${headers} DESTINATION include/!!Target!!)
