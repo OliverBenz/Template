@@ -1,5 +1,4 @@
 # Settings
-include(FetchGTest.cmake)
 set(targetName "Template.gtest")
 
 # Get files to build
