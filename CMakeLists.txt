@@ -7,11 +7,10 @@ option(BUILD_TESTS "Create the unit tests for the project." True)
 option(BUILD_EXAMPLES "Create examples for the project." False)
 
 
-# Setup project settings
-include(lib/cmake/ProjectSettings.cmake)
-include(lib/cmake/CompilerWarnings.cmake)
-include(lib/cmake/CustomCommands.cmake)
+# Add libraries to project
+add_subdirectory(lib)
 
+# Add source, tests and examples
 add_subdirectory(src)
 if(BUILD_TESTS)
     add_subdirectory(tests)

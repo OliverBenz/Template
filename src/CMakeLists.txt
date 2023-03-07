@@ -1,5 +1,3 @@
-# find_package(Threads)
-
 # Settings
 set(targetName Template)
 
@@ -9,14 +7,14 @@ set(sources ${CMAKE_CURRENT_LIST_DIR}/main.cpp)
 
 # Create target
 add_library(${targetName} STATIC
-    # Common modules
     ${headers}
     ${sources}
 )
 
 
 # Link to thread module
-# target_link_libraries(${targetName} PRIVATE ${CMAKE_THREAD_LIBS_INIT})
+# target_link_libraries(${targetName} PRIVATE fmt)
+# target_include_directories(${targetName} PUBLIC ${CMAKE_CURRENT_LIST_DIR}/include)
 # set_target_properties(${targetName} PROPERTIES FOLDER "${ideFolderSource}")
 
 # Setup project settings
@@ -34,4 +32,4 @@ target_compile_definitions(${targetName} PUBLIC VERSION_PATCH=1)
 
 # System installation
 # install(TARGETS ${targetName} DESTINATION lib)
-# install(FILES ${headers} DESTINATION include/!!Target!!)
+# install(FILES ${headers} DESTINATION include/${targetName})
