@@ -5,8 +5,6 @@ set(targetName "Template.gtest")
 set(sources ${CMAKE_CURRENT_LIST_DIR}/main.gtest.cpp)
 set(headers )
 
-include_directories("../src/")
-
 # Create executable
 add_executable(${targetName}
     ${sources}
