@@ -1,66 +1,34 @@
-# Generated from CLion C/C++ Code Style settings
+﻿---
 BasedOnStyle: LLVM
-AccessModifierOffset: -4
+AccessModifierOffset: '-4'
 AlignAfterOpenBracket: Align
-AlignConsecutiveAssignments: None
-AlignOperands: Align
-AllowAllArgumentsOnNextLine: false
-AllowAllConstructorInitializersOnNextLine: false
-AllowAllParametersOfDeclarationOnNextLine: false
-AllowShortBlocksOnASingleLine: Always
-AllowShortCaseLabelsOnASingleLine: false
+AlignEscapedNewlines: Left
+AlignTrailingComments: 'false'
 AllowShortFunctionsOnASingleLine: None
 AllowShortIfStatementsOnASingleLine: Never
 AllowShortLambdasOnASingleLine: All
-AllowShortLoopsOnASingleLine: false
 AlwaysBreakAfterReturnType: None
-AlwaysBreakTemplateDeclarations: Yes
-BreakBeforeBraces: Custom
-BraceWrapping:
-  AfterCaseLabel: false
-  AfterClass: false
-  AfterControlStatement: Never
-  AfterEnum: false
-  AfterFunction: false
-  AfterNamespace: false
-  AfterUnion: false
-  BeforeCatch: false
-  BeforeElse: false
-  IndentBraces: false
-  SplitEmptyFunction: true
-  SplitEmptyRecord: true
+AlwaysBreakTemplateDeclarations: 'Yes'
 BreakBeforeBinaryOperators: None
-BreakBeforeTernaryOperators: true
+BreakBeforeBraces: Custom
 BreakConstructorInitializers: BeforeColon
 BreakInheritanceList: BeforeColon
-ColumnLimit: 120
-CompactNamespaces: false
-ContinuationIndentWidth: 8
-IndentCaseLabels: true
+ColumnLimit: '120'
+ContinuationIndentWidth: '8'
 IndentPPDirectives: None
-IndentWidth: 4
-KeepEmptyLinesAtTheStartOfBlocks: true
-MaxEmptyLinesToKeep: 2
+IndentWidth: '4'
+Language: Cpp
+MaxEmptyLinesToKeep: '2'
 NamespaceIndentation: None
-ObjCSpaceAfterProperty: false
-ObjCSpaceBeforeProtocolList: true
-PointerAlignment: Right
-ReflowComments: false
-SpaceAfterCStyleCast: true
-SpaceAfterLogicalNot: false
-SpaceAfterTemplateKeyword: false
-SpaceBeforeAssignmentOperators: true
-SpaceBeforeCpp11BracedList: false
-SpaceBeforeCtorInitializerColon: true
-SpaceBeforeInheritanceColon: true
+PointerAlignment: Left
+SpaceAfterCStyleCast: 'false'
+SpaceBeforeInheritanceColon: 'true'
 SpaceBeforeParens: ControlStatements
-SpaceBeforeRangeBasedForLoopColon: false
-SpaceInEmptyParentheses: false
-SpacesBeforeTrailingComments: 0
-SpacesInAngles: false
-SpacesInCStyleCastParentheses: false
-SpacesInContainerLiterals: false
-SpacesInParentheses: false
-SpacesInSquareBrackets: false
-TabWidth: 4
+SpaceBeforeRangeBasedForLoopColon: 'false'
+SpaceInEmptyParentheses: 'false'
+SpacesBeforeTrailingComments: '2'
+Standard: Cpp11
+TabWidth: '4'
 UseTab: ForIndentation
+
+...
