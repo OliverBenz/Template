@@ -3,3 +3,4 @@
 configuration=Debug
 buildTests=On
 buildExamples=On
+compileCoreCount=16
